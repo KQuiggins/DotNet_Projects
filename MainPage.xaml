@@ -10,7 +10,43 @@
     </ContentPage.Resources>
 
     <Grid x:Name="Container" BackgroundColor="Black">
-        
+        <Frame Margin="10,0,10,0" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Label 
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="Color Maker"/>
+                <Label Text="Red Value"/>
+                <Slider x:Name="sldRed"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"/>
+                <Label Text="Green Value"/>
+                <Slider x:Name="sldGreen"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"/>
+                <Label Text="Blue Value"/>
+                <Slider x:Name="sldBlue"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"/>
+                <Frame CornerRadius="25" HorizontalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label x:Name="lblHex"
+                           HorizontalTextAlignment="End"
+                           Text="HEX Value: #000000"
+                           VerticalOptions="Center"/>
+                        <ImageButton Margin="10,0,0,0"
+                                     HeightRequest="25"
+                                     Source="copy.svg"
+                                     VerticalOptions="Center"
+                                     WidthRequest="25"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
     </Grid>
 
 </ContentPage>
