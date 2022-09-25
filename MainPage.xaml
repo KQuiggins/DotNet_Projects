@@ -21,17 +21,20 @@
                 <Slider x:Name="sldRed"
                     MaximumTrackColor="{StaticResource Tertiary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Primary}"/>
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
                 <Label Text="Green Value"/>
                 <Slider x:Name="sldGreen"
                     MaximumTrackColor="{StaticResource Tertiary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Primary}"/>
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
                 <Label Text="Blue Value"/>
                 <Slider x:Name="sldBlue"
                     MaximumTrackColor="{StaticResource Tertiary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Primary}"/>
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
                 <Frame CornerRadius="25" HorizontalOptions="Center">
                     <HorizontalStackLayout>
                         <Label x:Name="lblHex"
@@ -42,9 +45,14 @@
                                      HeightRequest="25"
                                      Source="copy.svg"
                                      VerticalOptions="Center"
-                                     WidthRequest="25"/>
+                                     WidthRequest="25"
+                                     Clicked="ImageButton_Clicked"/>
                     </HorizontalStackLayout>
                 </Frame>
+                <Button x:Name="btnRandom"
+                        BackgroundColor="{StaticResource Primary}"
+                        Text="Generate Random Color"
+                        Clicked="btnRandom_Clicked"/>
             </VerticalStackLayout>
         </Frame>
     </Grid>
